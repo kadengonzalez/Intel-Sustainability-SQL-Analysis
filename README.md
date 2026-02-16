@@ -1,49 +1,48 @@
 Intel Sustainability Impact SQL Analysis
 Overview
 
-Conducted a SQL-based sustainability impact analysis using a simulated Intel device repurposing dataset to evaluate energy savings and CO₂ reductions across device types, age groups, and regions. This project demonstrates advanced SQL joins, aggregation, segmentation, and data-driven strategic insight generation.
+Conducted a SQL-based sustainability impact analysis using a simulated Intel device repurposing dataset to evaluate energy savings and CO₂ reductions across device types, age cohorts, and regions. This project demonstrates advanced SQL joins, aggregation, cohort engineering, and strategic data-driven insight generation.
 
 Dataset
 
 The dataset represents devices repurposed in 2024 and includes:
 
-Device-level metadata (device type, model year)
+Device metadata (device type, model year)
 
 Environmental impact metrics (energy savings, CO₂ saved, recycling rate)
 
-Usage purpose classification
+Usage purpose segmentation
 
-Regional segmentation (Asia, Europe, North America)
+Regional classification (Asia, Europe, North America)
 
-The dataset is simulated for educational purposes and reflects the structural characteristics of real-world sustainability data.
+The dataset is simulated for educational purposes and reflects the structure of real-world sustainability analytics data.
 
-Key Questions Answered
+Analysis Structure
+1️⃣ Base Dataset Engineering
 
-How many devices were repurposed in 2024?
+Joined device and impact tables
 
-What is the total energy and CO₂ savings impact?
+Created device_age (2024 − model_year)
 
-Do laptops or desktops drive greater environmental impact?
+Engineered device_age_bucket using CASE logic
 
-How does environmental impact vary by device age?
+2️⃣ Overall Environmental Impact
 
-Which regions generate the highest CO₂ savings per device?
+Total devices repurposed
 
-What strategic improvements could maximize sustainability outcomes?
+Average device age
 
-Skills & Tools
+Average annual energy savings
 
-SQL (SELECT, JOIN, GROUP BY, ORDER BY, WITH / CTE)
+Total CO₂ savings (converted from kg to metric tons)
 
-Aggregation (COUNT, AVG, SUM)
+3️⃣ Segmented Impact Analysis
 
-CASE statements for cohort engineering
+Impact comparison by device type (laptop vs desktop)
 
-Data segmentation by age bucket and region
+Impact comparison by device age cohort
 
-CO₂ unit conversion and impact modeling
-
-Data-driven sustainability strategy recommendations
+Impact comparison by geographic region
 
 Key Insights
 
@@ -57,10 +56,24 @@ Laptops drove the majority of overall savings due to higher repurposing volume.
 
 Asia demonstrated the highest CO₂ savings per device due to higher regional carbon intensity.
 
-Strategic targeting of older devices in high-carbon regions could maximize environmental impact.
+Targeting older devices in high-carbon regions could maximize sustainability impact.
+
+Skills & Tools Demonstrated
+
+SQL (SELECT, JOIN, GROUP BY, ORDER BY, WITH / CTE)
+
+Aggregation (COUNT, AVG, SUM)
+
+CASE-based cohort engineering
+
+Data segmentation and comparative analysis
+
+Unit conversion and sustainability impact modeling
+
+Data-driven strategic recommendation development
 
 Repository Contents
 
-queries.sql – All SQL queries used in analysis
+queries.sql – SQL queries used in the analysis
 
-project_submission.pdf – Final report with explanations and recommendations
+project.pdf – Final project report with explanations and recommendations
